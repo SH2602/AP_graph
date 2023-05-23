@@ -1,0 +1,9 @@
+*.exe
+*.json
+*.d
+*.o
+*.lck
+*.vpp
+*.bak_*
+*/html/
+*/latex/
