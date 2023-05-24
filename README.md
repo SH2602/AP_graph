@@ -1,8 +1,8 @@
 # AP_graph
-Possible implementation of a Graph, using the concepts that we have learned so far:
+Mogelijke implementatie van een graaf, gebruik makende van de concepten die we tijdens AP hebben geleerd:
 - Inheritance
 - Interfaces
 - Pointers
 - Overloading
 
-(Also used the concept of forward declaration, as this is neccesary for an working project)
+(Daarnaast wordt ook "forward declaration" toegepast, zie node.hpp)
