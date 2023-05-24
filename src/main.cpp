@@ -1,12 +1,5 @@
 #include <iostream>
-#include <queue>
 #include "include/graph.hpp"
-
-struct CompareNodes {
-    bool operator()(const Node* lhs, const Node* rhs) const {
-        return (*lhs) > (*rhs);
-    }
-};
 
 int main()
 {
@@ -25,30 +18,6 @@ int main()
     );
 
     std::cout << g << std::endl;
-    
-    std::cout << std::endl;
-
-    std::priority_queue<Node, std::vector<Node>, std::greater<Node>> pq;
-
-    pq.push(a); pq.push(b); pq.push(c); pq.push(d); pq.push(e); pq.push(f);
-
-    std::cout << "First item: " << std::endl << pq.top();
-
-    pq.pop();
-    std::cout << std::endl;
-    
-    std::cout << "Second item: " << std::endl << pq.top() << std::endl;
-    
-    std::cout << std::endl << "And now with pointers: " << std::endl; 
-    std::priority_queue<Node*, std::vector<Node*>, CompareNodes> pq2;
-    pq2.push(&a); pq2.push(&b); pq2.push(&c); pq2.push(&d); pq2.push(&e); pq2.push(&f);
-
-    std::cout << "First item: " << std::endl << (*pq2.top());
-
-    pq2.pop();
-    std::cout << std::endl;
-    
-    std::cout << "Second item: " << std::endl << (*pq2.top());
     
     return 0;
 }

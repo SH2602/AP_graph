@@ -1,17 +1,15 @@
 #pragma once
 #include <vector>
 #include <iostream>
-#include "IComparable.hpp"
-//#include "Node.hpp"
+//#include "Node.hpp" Dit gaat verkeerd...
 
-class Node;
+class Node; //Forward declaration werkt ook, maar alleen als ik pointers van Nodes gebruik
 
-class Edge : public IComparable
+class Edge
 {
     private:
-        // Node from;
+        // Node from; Dit kan dus niet, probeer maar!
         Node* from;
-        // Node to;
         Node* to;
         float weight;
 
@@ -20,6 +18,4 @@ class Edge : public IComparable
         Node* getFrom();
         Node* getTo();
         float getWeight();
-        bool operator<(const IComparable& rhs) const override;
-        bool operator>(const IComparable& rhs) const override;
 };
