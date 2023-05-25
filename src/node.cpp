@@ -31,13 +31,13 @@ std::ostream& operator<<(std::ostream& os, const Node& n)
     return os;
 }
 
-bool Node::operator<(const IComparable& rhs) const
+bool Node::operator<(const Node& rhs) const
 {
     const Node& rhsNode = dynamic_cast<const Node&>(rhs);
     return edges.size() < rhsNode.edges.size();
 }
 
-bool Node::operator>(const IComparable& rhs) const
+bool Node::operator>(const Node& rhs) const
 {
     const Node& rhsNode = dynamic_cast<const Node&>(rhs);
     return edges.size() > rhsNode.edges.size();

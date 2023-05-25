@@ -2,10 +2,9 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "IComparable.hpp"
 #include "edge.hpp"
 
-class Node : public IComparable
+class Node
 {
     private:
         std::vector<Edge*> edges;
@@ -16,7 +15,7 @@ class Node : public IComparable
         std::string getName();
         void addEdge(Edge* edge);
         std::vector<Edge*> getEdges();
-        bool operator<(const IComparable& rhs) const override;
-        bool operator>(const IComparable& rhs) const override;
+        bool operator<(const Node& rhs) const;
+        bool operator>(const Node& rhs) const;
         friend std::ostream& operator<<(std::ostream& os, const Node& n);
 };
