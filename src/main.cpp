@@ -18,6 +18,6 @@ int main()
     );
 
     std::cout << g << std::endl;
-    
+
     return 0;
 }

@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 #include <iostream>
-//#include "Node.hpp" Dit gaat verkeerd...
+//#include "node.hpp" Dit zou verkeerd gaan, want Node.hpp heeft edge.hpp nodig...
 
-class Node; //Forward declaration werkt ook, maar alleen als ik pointers van Nodes gebruik
+class Node; //...dit (a.k.a. Forward declaration) werkt ook, maar alleen als ik pointers van Nodes gebruik
 
 class Edge
 {

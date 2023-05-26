@@ -15,7 +15,7 @@ class Node
         std::string getName();
         void addEdge(Edge* edge);
         std::vector<Edge*> getEdges();
-        bool operator<(const Node& rhs) const;
-        bool operator>(const Node& rhs) const;
+        friend bool operator<(const Node& lhs, const Node& rhs);
+        friend bool operator>(const Node& lhs, const Node& rhs);
         friend std::ostream& operator<<(std::ostream& os, const Node& n);
 };

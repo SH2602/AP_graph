@@ -20,7 +20,7 @@ std::vector<Edge*> Node::getEdges()
     return edges;
 }
 
-std::ostream& operator<<(std::ostream& os, const Node& n)
+std::ostream &operator<<(std::ostream &os, const Node &n)
 {
     os << n.name << ": ";
     for(Edge* edge : n.edges)
@@ -31,14 +31,12 @@ std::ostream& operator<<(std::ostream& os, const Node& n)
     return os;
 }
 
-bool Node::operator<(const Node& rhs) const
+bool operator<(const Node& lhs, const Node& rhs)
 {
-    const Node& rhsNode = dynamic_cast<const Node&>(rhs);
-    return edges.size() < rhsNode.edges.size();
+    return lhs.edges.size() < rhs.edges.size();
 }
 
-bool Node::operator>(const Node& rhs) const
+bool operator>(const Node& lhs, const Node& rhs)
 {
-    const Node& rhsNode = dynamic_cast<const Node&>(rhs);
-    return edges.size() > rhsNode.edges.size();
+    return lhs.edges.size() > rhs.edges.size();
 }
