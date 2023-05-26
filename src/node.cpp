@@ -33,6 +33,8 @@ std::ostream &operator<<(std::ostream &os, const Node &n)
 
 bool operator<(const Node& lhs, const Node& rhs)
 {
+    //Ja, je leest het goed: Nodes worden vergeleken a.d.h.v. het aantal edges wat ze hebben.
+    //In jouw implementatie wil je dit natuurlijk niet. Maar waar sorteer je wel op?
     return lhs.edges.size() < rhs.edges.size();
 }
 
