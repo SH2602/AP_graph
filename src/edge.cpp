@@ -6,17 +6,17 @@ Edge::Edge(Node* from, Node* to, float weight) :
     weight(weight)
 { }
 
-Node* Edge::getFrom()
+Node* Edge::getFrom() const
 {
     return from;
 }
 
-Node* Edge::getTo()
+Node* Edge::getTo() const
 {
     return to;
 }
 
-float Edge::getWeight()
+float Edge::getWeight() const
 {
     return weight;
 }

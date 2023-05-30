@@ -12,9 +12,9 @@ class Node
 
     public:
         Node(std::string name);
-        std::string getName();
+        std::string getName() const;
         void addEdge(Edge* edge);
-        std::vector<Edge*> getEdges();
+        std::vector<Edge*> getEdges() const;
         friend bool operator<(const Node& lhs, const Node& rhs);
         friend bool operator>(const Node& lhs, const Node& rhs);
         friend std::ostream& operator<<(std::ostream& os, const Node& n);

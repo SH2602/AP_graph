@@ -15,7 +15,7 @@ class Edge
 
     public:    
         Edge(Node* from, Node* to, float weight);
-        Node* getFrom();
-        Node* getTo();
-        float getWeight();
+        Node* getFrom() const;
+        Node* getTo() const;
+        float getWeight() const;
 };
