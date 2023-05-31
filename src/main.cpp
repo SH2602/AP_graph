@@ -1,4 +1,6 @@
 #include <iostream>
+#include <queue>
+#include "include/nodegreaterthan.hpp"
 #include "include/graph.hpp"
 
 int main()
@@ -18,6 +20,26 @@ int main()
     );
 
     std::cout << g << std::endl;
+
+    std::priority_queue<Node*, std::vector<Node*>, NodeGreaterThan> pq;
+    pq.push(&a);
+    pq.push(&b);
+    pq.push(&c);
+    pq.push(&d);
+    pq.push(&e);
+    pq.push(&f);
+
+    std::cout << (*pq.top()) << std::endl;    
+    pq.pop();
+    std::cout << (*pq.top()) << std::endl; 
+    pq.pop();
+    std::cout << (*pq.top()) << std::endl; 
+    pq.pop();
+    std::cout << (*pq.top()) << std::endl; 
+    pq.pop();
+    std::cout << (*pq.top()) << std::endl; 
+    pq.pop();
+    std::cout << (*pq.top()) << std::endl; 
 
     return 0;
 }
