@@ -11,6 +11,8 @@ class Edge
         // Node from; Dit kan dus niet, probeer maar!
         Node* from;
         Node* to;
+    
+    protected:
         float weight;
 
     public:    
@@ -18,4 +20,5 @@ class Edge
         Node* getFrom() const;
         Node* getTo() const;
         float getWeight() const;
+        virtual void setWeight() = 0;
 };
