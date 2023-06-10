@@ -20,3 +20,8 @@ float Edge::getWeight() const
 {
     return weight;
 }
+
+void Edge::setWeight()
+{
+    this->weight = weight;
+}
